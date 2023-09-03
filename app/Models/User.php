@@ -47,6 +47,8 @@ class User extends Authenticatable
         "campus",
         "admission_type",
         "hostel_status",
+        "address",
+        "advisor_uni_id",
 
     ];
 
@@ -69,4 +71,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function courses()
+    {
+        return $this->hasMany(Course::class);
+    }
 }

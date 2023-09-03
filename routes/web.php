@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    // return view('welcome');
+    return view('index');
+})->name('home');
+
+
+Route::get('/students/profile', [LoginController::class, "index"])->name('students.profile');
+
+Route::get("/students/timetable", [LoginController::class, "timetable"])->name("students.timetable");
+
+Route::get("/students/attendance", [LoginController::class, "attendance"])->name("students.attendance");

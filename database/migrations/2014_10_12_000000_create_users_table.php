@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('password');
+            $table->string('password')->nullable();
             $table->string("first_name");
             $table->string("middle_name");
             $table->string("last_name");
@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string("father_name");
             $table->string("mother_name");
             $table->string("mother_maiden_name");
-            $table->string("date_of_birth");
+            $table->date("date_of_birth");
             $table->string("blood_group");
             $table->string("martial_status");
             $table->string("mother_tongue");
@@ -42,6 +42,7 @@ return new class extends Migration
             $table->string("campus");
             $table->string("admission_type");
             $table->string("hostel_status");
+            $table->string("address");
             $table->rememberToken();
             $table->timestamps();
         });
