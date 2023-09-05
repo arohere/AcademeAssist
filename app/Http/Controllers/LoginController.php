@@ -35,7 +35,7 @@ class LoginController extends Controller
 
     }
 
-    public function timetable()
+    public function courses()
     {
         $url = "https://erp.kluniversity.in/index.php?r=studentinfo%2Fstudentcoursemappingmasterinfoview%2Ftab_index_personal&dp-11-page=2&page=";
 
@@ -97,7 +97,7 @@ class LoginController extends Controller
 
         // Set the request headers
         $headers = [
-            'Cookie' => 'PHPSESSID=bk8e88lm99hu9h9gpm6e9qdpb6',
+            'Cookie' => 'PHPSESSID=' . config('app.php_session_id'),
         ];
 
         // Send a GET request to the URL with headers

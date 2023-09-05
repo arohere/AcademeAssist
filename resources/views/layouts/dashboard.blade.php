@@ -21,10 +21,9 @@
       }
     </style>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" />
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    
     @yield('css')
     {{-- START Ziggy Routes --}}
     {{-- END Ziggy Routes --}}
@@ -51,6 +50,9 @@
     <script src="{{ asset("tabler/js/demo-theme.min.js") }}"></script>
     <script src="{{ asset("tabler/libs/apexcharts/dist/apexcharts.min.js") }}" defer></script>
     <script src="{{ asset("tabler/libs/jsvectormap/dist/js/jsvectormap.min.js") }}" defer></script>
+    <script src="{{ asset('tabler//libs/nouislider/dist/nouislider.min.js') }}" defer></script>
+    <script src="{{ asset('tabler//libs/litepicker/dist/litepicker.js') }}" defer></script>
+    <script src="{{ asset('tabler//libs/tom-select/dist/js/tom-select.base.min.js') }}" defer></script>
     <script src="{{ asset("tabler/libs/jsvectormap/dist/maps/world.js") }}" defer></script>
     <script src="{{ asset("tabler/libs/jsvectormap/dist/maps/world-merc.js") }}" defer></script>
     <!-- Tabler Core -->
@@ -60,6 +62,7 @@
     <script src="//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/libs/tinymce/tinymce.min.js" defer></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.0/dist/cdn.min.js"></script>
 
     @yield('js')
 

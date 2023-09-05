@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\TimetableController;
 use Illuminate\Support\Facades\Route;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,12 +18,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     // return view('welcome');
-    return view('index');
+    return view('index')->
+    with("user", User::find(1));
 })->name('home');
 
 
 Route::get('/students/profile', [LoginController::class, "index"])->name('students.profile');
 
-Route::get("/students/timetable", [LoginController::class, "timetable"])->name("students.timetable");
 
-Route::get("/students/attendance", [LoginController::class, "attendance"])->name("students.attendance");
+Route::get("/students/courses", [LoginController::class, "courses"])->name("students.courses");
+
+Route::get("/students/timetable", [TimetableController::class, "index"])->name("students.timetable");

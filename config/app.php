@@ -144,6 +144,8 @@ return [
         // 'store'  => 'redis',
     ],
 
+    "php_session_id" => env('PHP_SESSION_ID'),
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
